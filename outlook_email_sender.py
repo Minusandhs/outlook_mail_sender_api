@@ -31,7 +31,25 @@ class outlook_email_sender():
             self.mail_item.HTMLBody = self.mail_body
         else:
             self.mail_item.Body = self.mail_body
-        
+
+    def __eq__(self,other):
+        if (self.mail_item.To == other.mail_item.To) and \
+            (self.mail_item.Subject == other.mail_item.Subject) and\
+                (self.mail_body == other.mail_body) and \
+                    (self.attachment == other.attachment) :
+            return True
+        else:
+            return False
+
+    
+    @property
+    def mail_to(self):
+        return self.mail_item.To
+    
+    @property
+    def mail_subject(self):
+        return self.mail_item.Subject
+
 
     def save_email(self):
         self.mail_item.Save()
