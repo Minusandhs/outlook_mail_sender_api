@@ -56,7 +56,8 @@ class outlook_email_sender():
         if (self.mail_item.To == other.mail_item.To) and \
             (self.mail_item.Subject == other.mail_item.Subject) and\
                 (self.mail_body == other.mail_body) and \
-                    (self.attachment == other.attachment) :
+                    (self.attachment == other.attachment) and\
+                        (self.mail_attachment_folder == other.mail_attachment_folder):
             return True
         else:
             return False

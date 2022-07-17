@@ -12,3 +12,5 @@ Methods:
     <instance>.save_email() to save the email to draft
     <instance>.send_email() to send the email
     <instance>.display_email() to display the email
+
+# Use equal operator to check one instance is match with other by all the parameters 
